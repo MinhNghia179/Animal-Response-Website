@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">Junger</a>
+      <ul>
+        <li><a href="" class="active">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Destition</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <h2 id="text"><span>It is time for a new</span><br />Adventure</h2>
+
+      <img src="./image/bird1.png" alt="#" id="bird1" />
+      <img src="./image/bird2.png" alt="#" id="bird2" />
+
+      <img src="./image/forest.png" alt="#" id="forest" />
+      <img src="./image/rocks.png" alt="#" id="rock" />
+      <img src="./image/water.png" alt="#" id="water" />
+      <a href="#" id="btn">Explore</a>
+    </section>
+    <div class="sec">
+      <h2>Zoo Scrolling Effect</h2>
+      <p>
+        A zoo is a place where animals live in captivity and are put on display
+        for people to view. Though people have kept wild animals for thousands
+        of years, those collections have not always resembled modern zoos.
+        <br />
+        The word “zoo” is short for “zoological park.” Zoos contain wide
+        varieties of animals that are native to all parts of the Earth. <br />
+
+        Though people have kept wild animals for thousands of years, those
+        collections have not always resembled modern zoos. <br />They left
+        records of expeditions to distant places to bring back exotic animals
+        such as giraffes, elephants, bears, dolphins, and birds. There is
+        evidence that ancient zoo owners hired animal handlers to make sure
+        their animals thrived and reproduced. The first zoos were created as
+        private collections by the wealthy to show their power. These private
+        collections were called menageries.
+        <br />
+
+        Wall carvings found in Egypt and Mesopotamia are evidence that rulers
+        and aristocrats created menageries as early as 2500 BCE.
+        <br />
+        They left records of expeditions to distant places to bring back exotic
+        animals such as giraffes, elephants, bears, dolphins, and birds. There
+        is evidence that ancient zoo owners hired animal handlers to make sure
+        their animals thrived and reproduced.
+      </p>
+    </div>
+    <script>
+      let text = document.getElementById("text");
+      let bird1 = document.getElementById("bird1");
+      let bird2 = document.getElementById("bird2");
+      let forest = document.getElementById("forest");
+      let rock = document.getElementById("rock");
+      let water = document.getElementById("water");
+      let header = document.getElementById("header");
+      let btn = document.getElementById("btn");
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        text.style.top = 50 + value * -0.5 + "%";
+        bird1.style.top = value * -1.5 + "px";
+        bird1.style.left = value * 2 + "px";
+        bird2.style.top = value * -1.5 + "px";
+        bird2.style.left = value * -5 + "px";
+        btn.style.marginTop = value * 1.5 + 'px';
+        rock.style.top = value * -0.12 + 'px';
+        forest.style.top = value * 0.12 + 'px';
+        header.style.top = value * 0.5 + 'px';
+      });
+    </script>
+  </body>
+</html>
